@@ -1,0 +1,61 @@
+<!-- Panel Title -->
+        
+  <div class="col-md-12">
+  <div class="alert alert-secondary text-center">
+    <strong>CUESTIONARIO</strong>
+  </div>
+
+<div class="contenedor">
+   <div class="col-md-2">
+   </div>
+    <div class="col-md-8">
+<form class=""[formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+
+
+<div class="form-group">
+<label for="zonas"> Comunidad autónoma donde trabaja: </label>
+<select  class="form-control" formControlName="zonas" required>
+<option value = {{zonas.id}}  *ngFor="let zonas of zona" >{{zonas.comunidad}}</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="validationCustom01">  ¿ Cual es su ocupación? </label>
+<select id="validationCustom01" class="form-control" formControlName="ocupacion" required>
+<option value = {{ocupacio.id}}  *ngFor="let ocupacio of ocupaciones" >{{ocupacio.name}}</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="gener"> Género </label>
+<select class="form-control" formControlName="gener" required>
+<option value = {{gener.id}}  *ngFor="let gener of genero" >{{gener.name}}</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="edad"> Edad </label>
+<select class="form-control" formControlName="edad" required>
+<option value = {{edad.id}}  *ngFor="let edad of edades" >{{edad.name}}</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="ecivil"> Estado civil </label>
+<select class="form-control" formControlName="ecivil" required>
+<option value = {{ecivil.id}}  *ngFor="let ecivil of ecivils" >{{ecivil.name}}</option>
+</select>
+</div>
+
+<button class="button" type="submit">Enviar</button>
+
+
+</form>
+
+    </div>
+<div class="col-md-2">
+   </div>
+
+  </div>
+  </div>
+ 
